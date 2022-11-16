@@ -22,11 +22,8 @@ export const Promocao =() =>{
                 console.log("Erro: sem conexão com a API.")
             })
         }
-
         getPromocao()
     },[id])
-
-
 
     return(
         <div>
@@ -39,7 +36,6 @@ export const Promocao =() =>{
                         <Link to= "/listar-empresas" className="m-auto btn btn-outline-secondary btn-sm">Empresas</Link>
                     </div>
                 </div>
-
 
                 <Table striped>
                     <thead>
@@ -62,12 +58,10 @@ export const Promocao =() =>{
                                 <td>
                                     <Link to={"/editar-promocao/" + promo.id} className="btn btn-outline-warning btn-sm">Editar</Link>
                                  </td>
-
                             </tr> 
                         ))}
                     </tbody>
                 </Table>
-
             </Container>
         </div>
     )

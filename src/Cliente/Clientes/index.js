@@ -93,8 +93,6 @@ export const Clientes = () => {
                                 <td><Link to={"/cartoes-cliente/" + cli.id}className="btn btn-outline-secondary btn-sm">Cartões</Link>
                                     <span className="btn btn-outline-danger btn-sm" onClick={()=> delCliente(cli.id)}>Excluir</span>
                                 </td>
-
-
                             </tr> 
                         ))}
                     </tbody>

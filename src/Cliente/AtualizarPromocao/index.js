@@ -66,9 +66,6 @@ export const AtualizarPromocao =() =>{
         getPromocao()
     }, [id])
 
-
-
-
     return(
         <div>
             <Container>
@@ -133,13 +130,11 @@ export const AtualizarPromocao =() =>{
                             value={validade} onChange={e=> setValidade(e.target.value)}
                         />
                     </FormGroup>
-
                     <FormGroup className="d-flex">
                     <Button type="submit" outline color='warning'>Atualizar</Button>
                     <Button type="reset" outline color='danger'>Limpar</Button>
                     </FormGroup>
                 </Form>
-
             </Container>
         </div>
     )

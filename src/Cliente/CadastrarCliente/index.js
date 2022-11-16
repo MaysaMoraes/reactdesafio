@@ -22,7 +22,6 @@ export const CadastrarCliente = () => {
         const headers = {
             'Content-Type': 'application/json'
         }
-      
         await axios.post(api + "/novo-cliente", cliente, { headers })
             .then((response) => {
                 console.log(response.data.message)
@@ -31,7 +30,6 @@ export const CadastrarCliente = () => {
                 console.log("Erro: sem conexão com a API.")
             })
     }
-
 
     return (
         <div>
@@ -44,7 +42,6 @@ export const CadastrarCliente = () => {
                         <Link to="/listar-clientes" className="m-auto btn btn-outline-secondary btn-sm">Clientes</Link>
                     </div>
                 </div>
-
 
                 <Form className="p-2" onSubmit={cadCliente}>
                     <FormGroup className="p-2">
@@ -84,13 +81,11 @@ export const CadastrarCliente = () => {
                             onChange={valorInput}
                         />
                     </FormGroup>
-
                     <FormGroup className="d-flex">
                     <Button type="submit" outline color='warning'>Cadastrar</Button>
                     <Button type="reset" outline color='danger'>Limpar</Button>
                     </FormGroup>
                 </Form>
-
             </Container>
         </div>
     )

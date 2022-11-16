@@ -38,7 +38,6 @@ export const CartoesCliente =() =>{
                     </div>
                 </div>
 
-
                 <Table striped>
                     <thead>
                         <tr>
@@ -57,7 +56,6 @@ export const CartoesCliente =() =>{
                                 <td>{cartaos.dataCartao}</td>
                                 <td>{cartaos.validade}</td>
                                 <td>
-                                   
                                     <Link to={"/cartao/"+cartaos.id +"/compras/promocao/:PromocaoId"} className="btn btn-outline-secondary btn-sm">Compras</Link>
                                     <Link to={"/editar-cartao/" + cartaos.id} className="btn btn-outline-warning btn-sm">Editar</Link>
                                  </td>

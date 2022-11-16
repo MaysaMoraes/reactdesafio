@@ -11,7 +11,6 @@ export const Home =() =>{
                         <p className="p-1">Desafio React - Maysa Moraes</p>
                     </div>
                 </div> 
-
                 <div>
                     <div className="p-2">
                             <Link to= "/listar-clientes" className="m-auto btn btn-outline-info btn-lg active">Clientes</Link>
@@ -21,8 +20,7 @@ export const Home =() =>{
                     </div>
                     <div className="p-3">
                             <Link to= "/novo-cliente" className="m-auto btn btn-outline-info btn-lg active">Novo Cliente</Link>
-                    </div>
-                    
+                    </div>   
                     <div className="p-3">
                             <Link to= "/nova-empresa" className="m-auto btn btn-outline-warning btn-lg active">Nova Empresa</Link>
                     </div>

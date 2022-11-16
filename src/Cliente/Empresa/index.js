@@ -66,8 +66,6 @@ export const Empresas =() =>{
                     </div>
                 </div>
 
-
-
                 <Table striped>
                     <thead>
                         <tr>
@@ -86,13 +84,10 @@ export const Empresas =() =>{
                                 <td><Link to={"/empresa/" + emp.id+"/promocao"}className="btn btn-outline-secondary btn-sm">Promoções</Link>
                                     <span className="btn btn-outline-danger btn-sm" onClick={()=> delEmpresa(emp.id)}>Excluir</span>
                                 </td>
-
-
                             </tr> 
                         ))}
                     </tbody>
                 </Table>
-
             </Container>
         </div>
     )

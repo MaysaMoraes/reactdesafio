@@ -26,8 +26,6 @@ export const ComprasCliente =() =>{
         getCompras()
     },[id])
 
-
-
     return(
         <div>
             <Container>
@@ -39,7 +37,6 @@ export const ComprasCliente =() =>{
                         <Link to= "/listar-clientes" className="m-auto btn btn-outline-secondary btn-sm">Clientes</Link>
                     </div>
                 </div> 
-
 
                 <Table striped>
                     <thead>
@@ -63,12 +60,10 @@ export const ComprasCliente =() =>{
                                 <td>
                                     <Link to={"/cartao/"+id+"/atualizarCompra/promocao/"+compras.PromocaoId} className="btn btn-outline-warning btn-sm">Editar</Link>
                                  </td>
-
                             </tr> 
                         ))}
                     </tbody>
                 </Table>
-
             </Container>
         </div>
     )

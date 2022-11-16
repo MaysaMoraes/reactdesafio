@@ -63,9 +63,6 @@ export const AtualizarCartao =() =>{
         getCartao()
     }, [id])
 
-
-
-
     return(
         <div>
             <Container>
@@ -121,13 +118,11 @@ export const AtualizarCartao =() =>{
                             value={validade} onChange={e=> setValidade(e.target.value)}
                         />
                     </FormGroup>
-
                     <FormGroup className="d-flex">
                     <Button type="submit" outline color='warning'>Atualizar</Button>
                     <Button type="reset" outline color='danger'>Limpar</Button>
                     </FormGroup>
                 </Form>
-
             </Container>
         </div>
     )

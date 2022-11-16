@@ -47,16 +47,19 @@ export const AtualizarCompra =() =>{
         const getCompras = async()=>{
             await axios.get(api+"/cartao/"+CartaoId+"/compras/promocao/"+PromocaoId)
             .then((response)=> {
-                setCartaoId(response.data.compras.CartaoId)
-                setPromocaoId(response.data.compras.PromocaoId)
-                setData(response.data.compras.data)
-                setQuantidade(response.data.compras.quantidade)
-                setValor(response.data.compras.valor)
+                setCartaoId(CartaoId)
+                setPromocaoId(PromocaoId)
 
-                console.log(response.data.compras.CartaoId)
-                console.log(response.data.compras.PromocaoId)
-                console.log(response.data.compras.data)
-                console.log(response.data.compras.quantidade)
+                const compras = response.data.compras
+                console.log(response.data.compras)
+                
+                for(let i = 0; i <= compras.length; i++ ){
+                    if(compras[i].CartaoId === parseInt(CartaoId) && compras[i].PromocaoId === parseInt(PromocaoId)){
+                        setData(compras[i].data)
+                        setQuantidade(compras[i].quantidade)
+                        setValor(compras[i].valor)
+                    }
+                }
             })
             .catch(()=>{
                 console.log("Erro: sem conexão com a API.")
@@ -64,9 +67,6 @@ export const AtualizarCompra =() =>{
         }
         getCompras()
     }, [CartaoId, PromocaoId])
-
-
-
 
     return(
         <div>
@@ -138,7 +138,6 @@ export const AtualizarCompra =() =>{
                     <Button type="reset" outline color='danger'>Limpar</Button>
                     </FormGroup>
                 </Form>
-
             </Container>
         </div>
     )

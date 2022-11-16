@@ -42,7 +42,6 @@ export const CadastrarEmpresa =() =>{
                     </div>
                 </div>
 
-
                 <Form className="p-2" onSubmit={cadEmpresa}>
                     <FormGroup className="p-2">
                             <Label>Nome</Label>
@@ -62,7 +61,6 @@ export const CadastrarEmpresa =() =>{
                             onChange={valorInput}
                         />
                     </FormGroup>
-
                     <FormGroup className="d-flex">
                     <Button type="submit" outline color='warning'>Cadastrar</Button>
                     <Button type="reset" outline color='danger'>Limpar</Button>
